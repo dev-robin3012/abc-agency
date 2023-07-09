@@ -21,7 +21,8 @@ const TopBar: FC = () => {
             key={idx}
             onMouseEnter={(e) => setActiveItem(item)}
             className={`px-6 text-xl font-medium transition-all ${
-              activeItem === item && "text-primary"
+              activeItem === item &&
+              "text-primary relative after:absolute after:-bottom-3 after:left-[calc(50%-4px)] after:w-2 after:h-2 after:bg-primary after:rounded-full"
             }`}
           >
             <Link href="#">{item}</Link>
