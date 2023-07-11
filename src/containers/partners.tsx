@@ -3,7 +3,7 @@ import Typography from "@/components/typography";
 import Image from "next/image";
 import { FC } from "react";
 
-const HighlightSection: FC = () => {
+const PartnersSection: FC = () => {
   return (
     <section className="my-[120px]">
       <Typography varient="h4" className="text-primary text-center">
@@ -15,4 +15,4 @@ const HighlightSection: FC = () => {
   );
 };
 
-export default HighlightSection;
+export default PartnersSection;

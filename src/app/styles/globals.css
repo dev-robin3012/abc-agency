@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("./animations/index.css");
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -17,4 +19,8 @@
 body {
   color: rgb(var(--foreground-rgb));
   scroll-behavior: smooth;
+}
+
+.effect3d {
+  transition: all ease 1s;
 }

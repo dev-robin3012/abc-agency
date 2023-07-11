@@ -5,7 +5,6 @@ import cardImg2 from "@/assets/card-img2.png";
 import cardImg3 from "@/assets/card-img3.png";
 import cardImg4 from "@/assets/card-img4.png";
 import Typography from "@/components/typography";
-import "animate.css";
 import Image from "next/image";
 import { FC, useState } from "react";
 
@@ -47,6 +46,8 @@ const CardSection: FC = () => {
     prev: 0,
   });
 
+  // const ref = useRef<HTMLElement>(null);
+
   const handleNext = () => {
     if (state.active < cards.length) {
       setState(({ next, active, prev }) => ({
@@ -66,6 +67,7 @@ const CardSection: FC = () => {
     <section
       className="relative overflow-hidden py-[120px] h-[1000px] flex items-center justify-center"
       onWheel={(e) => (e.deltaY > 0 ? handleNext() : handlePre())}
+      // ref={ref}
     >
       {cards.map((card, idx) => (
         <div

@@ -10,10 +10,10 @@ import MegaMenu from "./megaMenu";
 import megaMenu from "@/assets/megaMenuContent.js";
 
 const navItems = [
-  { label: "Home", hasMegaMenu: false },
-  { label: "Services", hasMegaMenu: true, menuData: megaMenu["Services"] },
-  { label: "Projects", hasMegaMenu: true, menuData: megaMenu["Projects"] },
-  { label: "Blog", hasMegaMenu: false },
+  { label: "Home", menuData: null },
+  { label: "Services", menuData: megaMenu["Services"], hasPromotion: true },
+  { label: "Projects", menuData: megaMenu["Projects"], hasPromotion: false },
+  { label: "Blog", menuData: null },
 ];
 
 const TopBar: FC = () => {
@@ -25,7 +25,7 @@ const TopBar: FC = () => {
 
       <ul className="flex items-center gap-10">
         {navItems.map((item, idx) =>
-          item.hasMegaMenu ? (
+          item.menuData ? (
             <MegaMenu
               key={idx}
               label={item.label}

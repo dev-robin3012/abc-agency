@@ -1,12 +1,12 @@
 import CardSection from "@/containers/card-section";
 import HeroSection from "@/containers/hero-section";
-import HighlightSection from "@/containers/highlight-section";
+import PartnersSection from "@/containers/partners";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <HighlightSection />
+      <PartnersSection />
       <CardSection />
     </main>
   );

@@ -1,7 +1,7 @@
-import Footer from "@/containers/footer";
-import TopBar from "@/containers/top-bar";
 import { Public_Sans } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.css";
+import TopBar from "@/containers/layout/top-bar";
+import Footer from "@/containers/layout/footer";
 
 const font_family = Public_Sans({
   subsets: ["latin"],

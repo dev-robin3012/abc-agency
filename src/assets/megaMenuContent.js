@@ -155,7 +155,101 @@ const megaMenuData = {
       ],
     },
   ],
-  Projects: [],
+  Projects: [
+    {
+      id: 1,
+      title: "Headless website",
+      metaDesc: "We have created several websites using headless architecture",
+      services: [
+        {
+          id: 1,
+          title: "CityJobs",
+          metaDesc: "Seamless global hiring platform",
+          icon: <ServiceIcon1 />,
+        },
+        {
+          id: 2,
+          title: "Upmarket Digital Agency",
+          metaDesc: "A B2B service website for a digital marketing agency",
+          icon: <ServiceIcon2 />,
+        },
+        {
+          id: 3,
+          title: "Eastside",
+          metaDesc: "Shopify expert services and consultancy",
+          icon: <ServiceIcon3 />,
+        },
+        {
+          id: 4,
+          title: "CryptonSEO",
+          metaDesc: "Enhance online visibility and search rankings",
+          icon: <ServiceIcon4 />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "E-commerce",
+      metaDesc: "We have build some robust e-commerce solutions",
+      services: [
+        {
+          id: 5,
+          title: "Garaz",
+          metaDesc: "Seamless online shopping experience",
+          icon: <ServiceIcon1 />,
+        },
+        {
+          id: 6,
+          title: "Obay",
+          metaDesc: "Innovative and captivating e-commerce platform",
+          icon: <ServiceIcon2 />,
+        },
+        {
+          id: 7,
+          title: "A2Z Market",
+          metaDesc: "Unique and compelling e-commerce platform",
+          icon: <ServiceIcon3 />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "Mobile Apps",
+      metaDesc: "Crafting innovative mobile solutions",
+      services: [
+        {
+          id: 8,
+          title: "GoodsPanda",
+          metaDesc: "Fast and seamless food delivery application",
+          icon: <ServiceIcon1 />,
+        },
+        {
+          id: 9,
+          title: "SurvChimp",
+          metaDesc: "A distinctive and captivating survey platform",
+          icon: <ServiceIcon2 />,
+        },
+        {
+          id: 10,
+          title: "Ai Stock Trader",
+          metaDesc: "An AI based stock broker in the global market",
+          icon: <ServiceIcon3 />,
+        },
+        {
+          id: 11,
+          title: "GoHorray",
+          metaDesc: "Easy and fast app platform for booking and ticketing",
+          icon: <ServiceIcon4 />,
+        },
+        {
+          id: 12,
+          title: "PLP",
+          metaDesc: "Seamless online apparels designing app",
+          icon: <ServiceIcon5 />,
+        },
+      ],
+    },
+  ],
 };
 
 export default megaMenuData;
