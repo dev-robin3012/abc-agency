@@ -1,6 +1,6 @@
 import { Public_Sans } from "next/font/google";
 import "./styles/globals.css";
-import TopBar from "@/containers/layout/top-bar";
+import TopBar from "@/containers/layout/topBar";
 import Footer from "@/containers/layout/footer";
 
 const font_family = Public_Sans({

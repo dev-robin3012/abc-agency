@@ -1,26 +1,20 @@
 import Typography from "@/components/typography";
 import { FC, useState } from "react";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import logo from "@/assets/Logo-black.png";
 import Button from "@/components/button";
+import menuContent from "@/assets/megaMenuContent.js";
 
-const ProjectsMenu: FC = ({ data }: any) => {
-  const [active, setActive] = useState(data[0]?.id);
+const ProjectsMenu: FC = () => {
+  const [active, setActive] = useState(menuContent.Projects[0]?.id);
 
-  const { services } = data.find((el: any) => el.id === active) || {};
+  const { services } = menuContent.Projects.find((el: any) => el.id === active) || {};
 
   return (
-    <DropdownMenu.Content
-      // @ts-ignore
-      as={motion.div}
-      initial={{ opacity: 0.5, y: 5, scaleX: 0.9, scaleY: 0.7 }}
-      animate={{ opacity: 1, y: 0, scaleX: 1, scaleY: 1 }}
-      className="bg-[#1E2A37] p-4 relative rounded-[20px] grid gap-2 grid-cols-3 shadow-xl max-w-[1050px] mt-5"
-    >
+    <div className="bg-[#1E2A37] p-4 rounded-[20px] shadow-xl grid grid-cols-3 w-[1050px] gap-2 ">
       <ul className="bg-dark px-4 py-3 rounded-[10px] space-y-2 col-span-1">
-        {data.map((item: any) => (
+        {menuContent.Projects.map((item: any) => (
           <li
             key={item.id}
             className={`${
@@ -66,9 +60,7 @@ const ProjectsMenu: FC = ({ data }: any) => {
           <Button fullWidth>Work With Arrioo</Button>
         </div>
       </div>
-
-      <DropdownMenu.Arrow className="h-3 w-7 fill-[#1E2A37]" />
-    </DropdownMenu.Content>
+    </div>
   );
 };
 

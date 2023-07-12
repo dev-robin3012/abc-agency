@@ -4,19 +4,21 @@ import heroImage from "@/assets/heroImage.png";
 import Button from "@/components/button";
 import Typography from "@/components/typography";
 import Image from "next/image";
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 
 const HeroSection: FC = () => {
   const [imageAngle, setImageAngle] = useState(12);
   const testRef = useRef<HTMLDivElement>(null);
 
-  document.addEventListener("scroll", () => {
-    const box = testRef.current?.getBoundingClientRect();
-    // @ts-ignore
-    const angle = Math.floor(box?.y / 150) * 2;
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const box = testRef.current?.getBoundingClientRect();
+      // @ts-ignore
+      const angle = Math.floor(box?.y / 150) * 2;
 
-    Math.sign(angle) >= 0 ? setImageAngle(angle) : setImageAngle(0);
-  });
+      Math.sign(angle) >= 0 ? setImageAngle(angle) : setImageAngle(0);
+    });
+  }, []);
 
   return (
     <section className="text-center pt-[120px]">

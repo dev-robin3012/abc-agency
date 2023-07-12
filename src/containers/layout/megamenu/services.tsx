@@ -1,23 +1,17 @@
 import Typography from "@/components/typography";
 import { FC, useState } from "react";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { motion, AnimatePresence } from "framer-motion";
+import menuContent from "@/assets/megaMenuContent.js";
 
-const ServicesMenu: FC = ({ data }: any) => {
-  const [active, setActive] = useState(data[0]?.id);
+const ServicesMenu: FC = () => {
+  const [active, setActive] = useState(menuContent.Services[0]?.id);
 
-  const { services } = data.find((el: any) => el.id === active) || {};
+  const { services } = menuContent.Services.find((el: any) => el.id === active) || {};
 
   return (
-    <DropdownMenu.Content
-      // @ts-ignore
-      as={motion.div}
-      initial={{ opacity: 0.5, y: 5, scaleX: 0.9, scaleY: 0.7 }}
-      animate={{ opacity: 1, y: 0, scaleX: 1, scaleY: 1 }}
-      className="bg-[#1E2A37] p-4 relative rounded-[20px] grid gap-2 grid-cols-2 shadow-xl max-w-[632px] mt-5"
-    >
+    <div className="bg-[#1E2A37] p-4 relative rounded-[20px] w-[632px] grid gap-2 grid-cols-2 shadow-xl">
       <ul className="bg-dark px-4 py-3 rounded-[10px] space-y-2 col-span-1">
-        {data.map((item: any) => (
+        {menuContent.Services.map((item: any) => (
           <li
             key={item.id}
             className={`${
@@ -55,9 +49,7 @@ const ServicesMenu: FC = ({ data }: any) => {
           </ul>
         </AnimatePresence>
       </div>
-
-      <DropdownMenu.Arrow className="h-3 w-7 fill-[#1E2A37]" />
-    </DropdownMenu.Content>
+    </div>
   );
 };
 
