@@ -50,6 +50,7 @@ const DropdownContainer = ({ children, direction, animatingOut, duration }: any)
   }, []);
 
   return (
+    // @ts-ignore
     <DropdownRoot duration={duration} direction={direction} animatingOut={animatingOut}>
       <Flipped flipId="dropdown-caret">
         <span className="w-0 h-0 border-x-8 border-x-transparent border-b-[16px] border-b-[#1E2A37]"></span>
@@ -59,6 +60,7 @@ const DropdownContainer = ({ children, direction, animatingOut, duration }: any)
         <DropdownBackground>
           <Flipped inverseFlipId="dropdown">
             <InvertedDiv>
+              {/* @ts-ignore */}
               <AltBackground ref={(el) => (altBackgroundEl = el)} duration={duration} />
               <FadeContents direction={direction} duration={duration} ref={currentDropdownEl}>
                 {currentDropdown}
@@ -67,6 +69,7 @@ const DropdownContainer = ({ children, direction, animatingOut, duration }: any)
           </Flipped>
 
           <Flipped inverseFlipId="dropdown" scale>
+            {/* @ts-ignore */}
             <InvertedDiv absolute>
               {prevDropdown && (
                 <FadeContents
