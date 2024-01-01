@@ -5,7 +5,7 @@ import { FC } from "react";
 
 const Footer: FC = () => {
   return (
-    <footer className="py-[120px] flex items-center justify-between">
+    <footer className="py-[120px] flex items-center justify-between container mx-auto">
       <div className="space-y-10">
         <Image src={logo} alt="logo" className="h-20 w-36" />
         <Typography varient="h5">

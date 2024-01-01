@@ -5,12 +5,12 @@ import { FC } from "react";
 
 const PartnersSection: FC = () => {
   return (
-    <section className="my-[120px]">
+    <section className="my-[120px] container mx-auto">
       <Typography varient="h4" className="text-primary text-center">
         Trusted by Top-tier product campanies
       </Typography>
 
-      <Image src={companiesLogo} alt="" className="mt-12" />
+      <Image src={companiesLogo} alt="" className="mt-12 mx-auto" />
     </section>
   );
 };
