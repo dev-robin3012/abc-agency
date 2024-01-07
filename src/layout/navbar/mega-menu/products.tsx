@@ -3,14 +3,9 @@ import type { FC } from "react";
 
 const ProductsMenu: FC = () => {
   return (
-    <motion.div
-      layoutId="menu"
-      className="absolute right-0 shadow-lg cursor-auto pt-5"
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="w-[400px] p-5 bg-gray rounded-lg">
-        <p className="p-5 bg-dark rounded-md">
+    <motion.div layoutId="menu" className="shadow-lg cursor-auto">
+      <div className="p-5 bg-primary-light rounded-lg">
+        <p className="p-5 bg-dark rounded-md flex gap-5">
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque aperiam officiis
             expedita temporibus, minima voluptatibus cupiditate, exercitationem eius et atque

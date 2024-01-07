@@ -1,6 +1,9 @@
 @import url("./backInDown.css");
 @import url("./backOutDown.css");
 @import url("./zoomInDown.css");
+@import url("./fade-in.css");
+@import url("./fade-out.css");
+@import url("./flip-in-x.css");
 
 :root {
   --animate-duration: 1s;

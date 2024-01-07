@@ -1,6 +1,6 @@
 import CardSection from "@/containers/card-section";
-import HeroSection from "@/containers/hero-section";
 import PartnersSection from "@/containers/partners";
+import HeroSection from "@/sections/hero-section";
 
 export default function Home() {
   return (

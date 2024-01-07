@@ -11,7 +11,7 @@ interface Props {
 const Button: FC<Props> = ({ children, secondary = false, arrow = false, fullWidth = false }) => {
   return (
     <button
-      className={`px-6 border rounded-3xl py-[11px] inline-flex gap-4 items-center justify-center shrink-0 transition-all ${
+      className={`px-6 border rounded-3xl py-2.5 inline-flex gap-4 items-center justify-center shrink-0 transition-all ${
         fullWidth ? "w-full" : ""
       } ${
         secondary
