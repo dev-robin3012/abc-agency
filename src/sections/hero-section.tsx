@@ -1,6 +1,8 @@
 "use client";
 
 import Button from "@/components/button";
+import Container from "@/components/container";
+import Icon from "@/components/icons";
 import Typography from "@/components/typography";
 import { motion } from "framer-motion";
 import type { FC } from "react";
@@ -21,8 +23,8 @@ const HeroSection: FC = () => {
 
   return (
     <section className="text-center min-h-[75vh] flex items-center justify-center">
-      <div className="space-y-10">
-        <Typography varient="h1">
+      <Container className="space-y-10 overflow-x-hidden py-10">
+        <Typography.Hero>
           <motion.span
             initial={{ y: "-500px" }}
             animate={{ y: 0 }}
@@ -43,7 +45,7 @@ const HeroSection: FC = () => {
             </motion.span>
           </motion.span>
 
-          <span className="flex items-center justify-center gap-5">
+          <span className="flex items-center justify-center gap-2 md:gap-5">
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -52,7 +54,7 @@ const HeroSection: FC = () => {
               for a
             </motion.span>
             <motion.span
-              initial={{ x: "300%" }}
+              initial={{ x: "100vw" }}
               animate={{ x: 0 }}
               transition={{ delay: 1.5, duration: 1, type: "tween", stiffness: 100 }}
               className="-z-10"
@@ -73,7 +75,7 @@ const HeroSection: FC = () => {
           </span>
 
           <motion.span
-            initial={{ x: "-150%" }}
+            initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             transition={{ delay: 2, duration: 1, type: "tween", stiffness: 100 }}
             className="block"
@@ -91,23 +93,24 @@ const HeroSection: FC = () => {
               Trusted Agency
             </motion.span>
           </motion.span>
-        </Typography>
+        </Typography.Hero>
 
-        <Typography varient="h4">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 3, duration: 1 }}
-          >
-            Elevate Your Brand: Powerhouse Agency for Impactful Strategies
+        <Typography.H4>
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3 }}>
+            Elevate Your Brand Powerhouse Agency for Impactful Strategies
           </motion.span>
-        </Typography>
+        </Typography.H4>
 
-        <div className="flex items-center gap-6 justify-center">
-          <Button>Our Services</Button>
-          <Button>Work With Us</Button>
-        </div>
-      </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3.5 }}
+          className="flex items-center gap-6 justify-center"
+        >
+          <Button variant="outline">Our Services</Button>
+          <Button icon={<Icon name="arrowRight" />}>Work With Us</Button>
+        </motion.div>
+      </Container>
 
       {/* <div
         className="transition-all duration-700"

@@ -1,10 +1,10 @@
-import Typography from "@/components/typography";
-import { FC, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import logo from "@/assets/Logo-black.png";
-import Button from "@/components/button";
 import menuContent from "@/assets/megaMenuContent.js";
+import Button from "@/components/button";
+import Typography from "@/components/typography";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { FC, useState } from "react";
 
 const ProjectsMenu: FC = () => {
   const [active, setActive] = useState(menuContent.Projects[0]?.id);

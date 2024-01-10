@@ -43,9 +43,14 @@ const MegaMenu: FC<Props> = ({ items }) => {
         initial="closed"
         animate={showMegaMenu ? "open" : "closed"}
         variants={{
-          open: { display: "block", transform: "rotateX(0deg)" },
+          open: {
+            display: "block",
+            transform: "scale(1)",
+            transformOrigin: "top",
+          },
           closed: {
-            transform: "rotateX(90deg)",
+            transform: "scale(0)",
+            transformOrigin: "top",
             transitionEnd: {
               display: "none",
             },

@@ -1,5 +1,7 @@
 import logo from "@/assets/Logo.png";
 import Button from "@/components/button";
+import Container from "@/components/container";
+import Icon from "@/components/icons";
 import Image from "next/image";
 import { type FC } from "react";
 import MegaMenu from "./mega-menu";
@@ -17,16 +19,21 @@ const megaMenuItems = [
 const NavBar: FC = () => {
   return (
     <header className="sticky top-0 bg-dark z-10">
-      <div className="container flex items-center justify-between mx-auto py-5">
-        <Image src={logo} alt="" />
-        <div className="flex items-center relative">
+      <Container className="flex items-center justify-between mx-auto py-5">
+        <Image
+          src={logo}
+          alt="app logo"
+          className="border transition-all w-auto h-12 md:h-14 lg:h-16"
+        />
+        <div className="hidden xl:flex items-center relative">
           <NavLink label="LinkItem1" href="link1" />
           <NavLink label="LinkItem2" href="link2" />
-          <NavLink label="LinkItem3" href="link3" />
           <MegaMenu items={megaMenuItems} />
-          <Button>Get in Touch</Button>
+          <Button variant="outline" icon={<Icon name="arrowRight" />}>
+            Get in Touch
+          </Button>
         </div>
-      </div>
+      </Container>
     </header>
   );
 };
