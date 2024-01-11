@@ -2,27 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("./animations/index.css");
+@layer base {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  scroll-behavior: smooth;
-}
-
-.effect3d {
-  transition: all ease 1s;
-}
-
-.navItem {
-  padding: 2px 20px;
+  body {
+    color: rgb(var(--foreground-rgb));
+    scroll-behavior: smooth;
+  }
 }

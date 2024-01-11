@@ -1,7 +1,7 @@
-import Typography from "@/components/typography";
-import { FC, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import menuContent from "@/assets/megaMenuContent.js";
+import Typography from "@/components/typography";
+import { AnimatePresence, motion } from "framer-motion";
+import { FC, useState } from "react";
 
 const ServicesMenu: FC = () => {
   const [active, setActive] = useState(menuContent.Services[0]?.id);
@@ -21,8 +21,8 @@ const ServicesMenu: FC = () => {
             } p-4 rounded-lg cursor-default transition-all duration-700`}
             onMouseEnter={() => setActive(item.id)}
           >
-            <Typography>{item.title}</Typography>
-            <Typography varient="small">{item.metaDesc}</Typography>
+            <Typography.H5>{item.title}</Typography.H5>
+            <Typography.Text variant="small">{item.metaDesc}</Typography.Text>
           </li>
         ))}
       </ul>
@@ -41,8 +41,8 @@ const ServicesMenu: FC = () => {
               >
                 {service.icon}
                 <div className="flex-1">
-                  <Typography>{service.title}</Typography>
-                  <Typography varient="small">{service.metaDesc}</Typography>
+                  <Typography.H5>{service.title}</Typography.H5>
+                  <Typography.Text variant="small">{service.metaDesc}</Typography.Text>
                 </div>
               </motion.li>
             ))}

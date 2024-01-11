@@ -83,9 +83,9 @@ const CardSection: FC = () => {
           }`}
         >
           <div className="space-y-10">
-            <Typography varient="h1">{idx + 1}</Typography>
-            <Typography varient="h2">{card.title}</Typography>
-            <Typography>{card.content}</Typography>
+            <Typography.H2>{idx + 1}</Typography.H2>
+            <Typography.H3>{card.title}</Typography.H3>
+            <Typography.Text>{card.content}</Typography.Text>
           </div>
 
           <Image src={card.image} alt="" className="h-[509px] w-[445px]" />

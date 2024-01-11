@@ -94,7 +94,7 @@ const ServicesMenu: FC = () => {
                 active === title && "text-dark"
               )}
             >
-              <span className="block whitespace-nowrap">{title}</span>
+              <span className="block whitespace-nowrap font-semibold">{title}</span>
               <span className="text-xs block font-normal">{meta}</span>
               {active === title && (
                 <motion.span

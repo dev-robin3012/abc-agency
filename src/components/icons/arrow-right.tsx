@@ -1,13 +1,16 @@
-import { FC } from "react";
+import clsx from "clsx";
+import type { FC } from "react";
+import type IconProps from "./interface";
 
-const ArrowRight: FC = () => {
+const ArrowRight: FC<Pick<IconProps, "className">> = ({ className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       strokeWidth="0"
-      width="24"
-      height="24"
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
+      className={clsx(className)}
     >
       <g clipPath="url(#clip0_306_461)">
         <path
