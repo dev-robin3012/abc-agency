@@ -24,8 +24,8 @@ const ProjectsMenu: FC = () => {
             } p-4 rounded-lg cursor-default transition-all duration-700`}
             onMouseEnter={() => setActive(item.id)}
           >
-            <Typography>{item.title}</Typography>
-            <Typography varient="small">{item.metaDesc}</Typography>
+            <Typography.H5>{item.title}</Typography.H5>
+            <Typography.Text variant="small">{item.metaDesc}</Typography.Text>
           </li>
         ))}
       </ul>
@@ -44,8 +44,8 @@ const ProjectsMenu: FC = () => {
               >
                 {service.icon}
                 <div className="flex-1">
-                  <Typography>{service.title}</Typography>
-                  <Typography varient="small">{service.metaDesc}</Typography>
+                  <Typography.H5>{service.title}</Typography.H5>
+                  <Typography.Text variant="small">{service.metaDesc}</Typography.Text>
                 </div>
               </motion.li>
             ))}
@@ -55,9 +55,9 @@ const ProjectsMenu: FC = () => {
         <div className="space-y-10">
           <div className="bg-primary p-10 rounded-2xl text-dark text-center space-y-6">
             <Image src={logo} alt="" className="mx-auto" />
-            <Typography varient="h4">The Best Design Agency</Typography>
+            <Typography.H4>The Best Design Agency</Typography.H4>
           </div>
-          <Button fullWidth>Work With Arrioo</Button>
+          <Button>Work With Arrioo</Button>
         </div>
       </div>
     </div>
