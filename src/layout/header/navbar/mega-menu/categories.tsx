@@ -2,79 +2,9 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useState, type FC } from "react";
 import MegaMenu from ".";
+import { megaMenu } from "../../nav-items";
 
-const categories = [
-  {
-    title: "Headless website",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-  {
-    title: "Composable commerce",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-  {
-    title: "Apps + PWAs",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-  {
-    title: "Custom software development",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-    ],
-  },
-  {
-    title: "Lorem Ipsum",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-];
+const { categories } = megaMenu;
 
 const CategoriesMenu: FC = () => {
   const [active, setActive] = useState(categories[0].title);
@@ -101,6 +31,7 @@ const CategoriesMenu: FC = () => {
             </motion.li>
           ))}
         </motion.ul>
+
         <div className="w-96">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo et saepe distinctio ad vitae
           mollitia temporibus. Provident officia animi dolorum eum doloremque temporibus, sunt

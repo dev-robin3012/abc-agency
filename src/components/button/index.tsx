@@ -47,6 +47,7 @@ const Button: FC<ButtonProps> = ({
           repeatType: "reverse",
         },
       }}
+      whileTap={{ scale: 0.9 }}
     >
       {children}{" "}
       {loading ? (

@@ -57,12 +57,14 @@ const MegaItems: FC<Props> = ({ items }) => {
         variants={{
           open: {
             display: "block",
-            transform: "scale(1)",
+            transform: "perspective(0px) rotateX(0)",
             transformOrigin: "top",
+            opacity: 1,
           },
           closed: {
-            transform: "scale(0)",
+            transform: "perspective(0px) rotateX(-0.02deg)",
             transformOrigin: "top",
+            opacity: 0,
             transitionEnd: {
               display: "none",
             },

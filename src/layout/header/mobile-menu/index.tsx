@@ -43,7 +43,7 @@ const MobileMenu: FC = () => {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={sidebar}
-        className="fixed w-2/3 md:w-1/2 top-0 bottom-0 right-0 bg-white flex items-center justify-center p-10"
+        className="fixed w-2/3 md:w-1/2 top-0 bottom-0 right-0 bg-white p-10"
       >
         <Navigation />
       </motion.nav>
