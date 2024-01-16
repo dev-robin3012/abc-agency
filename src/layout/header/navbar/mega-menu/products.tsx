@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
 import type { FC } from "react";
+import MegaMenu from ".";
 
 const ProductsMenu: FC = () => {
   return (
-    <motion.div layoutId="menu" className="shadow-lg cursor-auto">
+    <MegaMenu>
       <div className="p-5 bg-primary-light rounded-lg">
         <p className="p-5 bg-dark rounded-md flex gap-5">
           <span>
@@ -18,7 +18,7 @@ const ProductsMenu: FC = () => {
           </span>
         </p>
       </div>
-    </motion.div>
+    </MegaMenu>
   );
 };
 

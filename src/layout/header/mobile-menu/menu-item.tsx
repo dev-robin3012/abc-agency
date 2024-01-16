@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FC } from "react";
 
 const variants = {
   open: {
@@ -19,12 +20,18 @@ const variants = {
 
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
-const MenuItem = ({ i }) => {
+const MenuItem: FC<any> = ({ i }) => {
   const style = { border: `2px solid ${colors[i]}` };
+
   return (
-    <motion.li variants={variants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-      <div className="icon-placeholder" style={style} />
-      <div className="text-placeholder" style={style} />
+    <motion.li
+      variants={variants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      className="list-none mb-5 flex items-center cursor-pointer"
+    >
+      <div className="w-10 h-10 rounded-full mr-5" style={style} />
+      <div className="rounded w-[200px] h-5 flex-1" style={style} />
     </motion.li>
   );
 };

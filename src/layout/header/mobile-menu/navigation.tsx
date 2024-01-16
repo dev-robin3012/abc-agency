@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import type { FC } from "react";
 import MenuItem from "./menu-item";
 
 const variants = {
@@ -10,8 +11,8 @@ const variants = {
   },
 };
 
-const Navigation = () => (
-  <motion.ul variants={variants}>
+const Navigation: FC = () => (
+  <motion.ul variants={variants} className="h-full flex flex-col justify-center">
     {itemIds.map((i) => (
       <MenuItem i={i} key={i} />
     ))}

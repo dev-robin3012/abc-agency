@@ -1,16 +1,27 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { ReactNode, useState, type FC } from "react";
+import { useState, type FC } from "react";
+import { INavItem } from "../interface";
+import CategoriesMenu from "./mega-menu/categories";
+import ProductsMenu from "./mega-menu/products";
+import ServicesMenu from "./mega-menu/services";
 
 interface Props {
-  items: { label: string; menu: ReactNode }[];
+  items: INavItem[];
 }
 
-const MegaMenu: FC<Props> = ({ items }) => {
+const menus = {
+  categories: <CategoriesMenu />,
+  services: <ServicesMenu />,
+  products: <ProductsMenu />,
+};
+
+const MegaItems: FC<Props> = ({ items }) => {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [active, setActive] = useState("");
 
-  const activeItem = items.find((item) => item.label === active);
+  //   @ts-ignore
+  const activeMenu = menus[active.toLowerCase()];
 
   return (
     <div
@@ -38,6 +49,7 @@ const MegaMenu: FC<Props> = ({ items }) => {
         </motion.div>
       ))}
 
+      {/* THis is the mega menu */}
       <motion.section
         className={clsx("absolute right-0 top-full h-fit w-fit pt-3 z-10")}
         initial="closed"
@@ -57,10 +69,10 @@ const MegaMenu: FC<Props> = ({ items }) => {
           },
         }}
       >
-        {activeItem?.menu}
+        {activeMenu}
       </motion.section>
     </div>
   );
 };
 
-export default MegaMenu;
+export default MegaItems;

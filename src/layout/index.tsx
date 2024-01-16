@@ -1,12 +1,12 @@
 "use client";
 
 import type { FC, PropsWithChildren } from "react";
-import NavBar from "./navbar";
+import Header from "./header";
 
 const AppLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <NavBar />
+      <Header />
       {children}
       {/* <Footer /> */}
     </>

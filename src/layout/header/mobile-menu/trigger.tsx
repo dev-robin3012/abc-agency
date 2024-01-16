@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { FC } from "react";
+import { TriggerProps } from "./interface";
 
-const Path = (props) => (
+const Path: FC<any> = (props) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
@@ -10,9 +12,12 @@ const Path = (props) => (
   />
 );
 
-const MenuTrigger = ({ toggle }) => (
-  <button onClick={toggle} className="outline-none cursor-pointer p-3 bg-transparent z-10">
-    <svg width="23" height="23" viewBox="0 0 23 23">
+const Trigger: FC<TriggerProps> = ({ toggle }) => (
+  <button
+    onClick={toggle}
+    className="outline-none cursor-pointer p-3 bg-transparent z-50 bg-white rounded-full flex items-center justify-center text-xl"
+  >
+    <svg width="1em" height="1em" viewBox="0 0 20 20">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
@@ -37,4 +42,4 @@ const MenuTrigger = ({ toggle }) => (
   </button>
 );
 
-export default MenuTrigger;
+export default Trigger;

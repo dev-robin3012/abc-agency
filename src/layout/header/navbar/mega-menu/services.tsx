@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useState, type FC } from "react";
+import MegaMenu from ".";
 
 const services = [
   {
@@ -82,7 +83,7 @@ const ServicesMenu: FC = () => {
     services.find((item) => item.title === active)?.subItems || [];
 
   return (
-    <motion.div layoutId="menu" className="shadow-lg cursor-auto">
+    <MegaMenu>
       <div className="p-5 bg-primary-light rounded-lg flex items-stretch gap-3">
         <motion.ul className="bg-dark p-4 rounded-md">
           {services.map(({ title, meta }, key) => (
@@ -121,7 +122,7 @@ const ServicesMenu: FC = () => {
           ))}
         </motion.ul>
       </div>
-    </motion.div>
+    </MegaMenu>
   );
 };
 
