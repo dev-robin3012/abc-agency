@@ -10,79 +10,185 @@ export const navItems: INavItem[] = [
   { id: 102, label: "Blogs", href: "/blogs", hasMegaMenu: false },
   { id: 103, label: "Categories", href: "/categories", hasMegaMenu: true },
   { id: 104, label: "Services", href: "/services", hasMegaMenu: true },
-  { id: 105, label: "Products", href: "/products", hasMegaMenu: true },
+  // { id: 105, label: "Products", href: "/products", hasMegaMenu: true },
 ];
 
 export const megaMenu = {
   categories: [
     {
-      title: "Headless website",
-      meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      subItems: [
-        { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      ],
-    },
-    {
-      title: "Composable commerce",
-      meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      subItems: [
-        { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      ],
-    },
-    {
-      title: "Apps + PWAs",
-      meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      subItems: [
-        { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      ],
-    },
-    {
-      title: "Custom software development",
-      meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+      title: "Legacy System Integration",
+      meta: "Lorem ipsum doller kocurloti habijabi tejpata doller kocurloti habijabi tejpata",
       subItems: [
         {
-          title: "Custom software development",
+          title: "Ipsum doller kocurloti",
           meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon1,
         },
         {
-          title: "Custom software development",
+          title: "Doller kocurloti habijabi",
           meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
         },
         {
-          title: "Custom software development",
+          title: "Headless website",
           meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon3,
         },
         {
-          title: "Custom software development",
+          title: "Doller Ipsum ipsum",
           meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon4,
         },
         {
-          title: "Custom software development",
+          title: "Headless website Vl",
           meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon5,
+        },
+        {
+          title: "Maxime mollitia aa",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
         },
       ],
     },
     {
-      title: "Lorem Ipsum",
-      meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+      title: "Content Management",
+      meta: "Lorem ipsum doller kocurloti habijabi tejpata sit amet consectetur adipisicing elit",
       subItems: [
-        { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-        { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
+        {
+          title: "Maxime mollitia",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon5,
+        },
+        {
+          title: "Composable commerce",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon4,
+        },
+        {
+          title: "Veritatis obcaecati tenetur",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
+        },
+        {
+          title: "Quo neque error",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon3,
+        },
+        {
+          title: "Impedit sit sunt quaerat",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon1,
+        },
+        {
+          title: "Sunt quaerat Impedit sit ",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon4,
+        },
+      ],
+    },
+    {
+      title: "Provident similique",
+      meta: "Lorem ipsum doller kocurloti habijabi tejpata sint commodi repudiandae consequuntur voluptatum",
+      subItems: [
+        {
+          title: "Accusantium nemo autem",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
+        },
+        {
+          title: "Reprehenderit quia",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon4,
+        },
+        {
+          title: "Ipsa laudantium molestias",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon1,
+        },
+        {
+          title: "Officiis iure rerum",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon5,
+        },
+        {
+          title: "Sit laborum ab eius",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon3,
+        },
+      ],
+    },
+    {
+      title: "Commodi minima excepturi",
+      meta: "Lorem ipsum doller kocurloti habijabi tejpata eveniet aliquid culpa officia aut",
+      subItems: [
+        {
+          title: "Quaerat provident commodi",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon3,
+        },
+        {
+          title: "Dolorum eligendi quam",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon1,
+        },
+        {
+          title: "Voluptatem quaerat",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
+        },
+        {
+          title: "Voluptatem quaerat lorem",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon5,
+        },
+        {
+          title: "Placeat qui corporis!",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon4,
+        },
+        {
+          title: "TeneturW Veritatis obcaecati ",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
+        },
+      ],
+    },
+    {
+      title: "Lconsectetur veniam similiqu",
+      meta: "Lorem ipsum doller kocurloti habijabi tejpata molestias architecto voluptate",
+      subItems: [
+        {
+          title: "Lsed amet tempora",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
+        },
+        {
+          title: "Ivoluptates a cumque",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon5,
+        },
+        {
+          title: "Fuga praesentium optio",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon4,
+        },
+
+        {
+          title: "TeneturW Veritatis obcaecat",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon2,
+        },
+        {
+          title: "Baliquid culpa officia aut",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon3,
+        },
+        {
+          title: "Nulla placeat Voluptatem",
+          meta: "Lorem ipsum doller kocurloti habijabi tejpata",
+          icon: icon1,
+        },
       ],
     },
   ],
