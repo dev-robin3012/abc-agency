@@ -1,11 +1,6 @@
-import HeroSection from "@/sections/hero-section";
+import HomepageContent from "@/page-builder/home-page";
+import type { NextPage } from "next";
 
-export default function Home() {
-  return (
-    <main>
-      <HeroSection />
-      {/* <PartnersSection />
-      <CardSection /> */}
-    </main>
-  );
-}
+const HomePage: NextPage = () => <HomepageContent />;
+
+export default HomePage;

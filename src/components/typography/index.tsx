@@ -5,7 +5,7 @@ import type ITypographyProps from "./interface";
 const Hero: FC<ITypographyProps> = ({ children, className }) => (
   <h1
     className={clsx(
-      "font-bold transition-all",
+      "font-bold transition-all leading-[120%]",
       "text-[2.44rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[5rem]",
       className
     )}

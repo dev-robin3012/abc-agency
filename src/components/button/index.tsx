@@ -26,7 +26,7 @@ const Button: FC<ButtonProps> = ({
   const variation = clsx(
     `border border-${type}`,
     variant === "fill" && `bg-${type} text-dark`,
-    variant === "outline" && `text-${type} `
+    variant === "outline" && `text-${type}`
   );
 
   return (
@@ -47,6 +47,7 @@ const Button: FC<ButtonProps> = ({
           repeatType: "reverse",
         },
       }}
+      whileTap={{ scale: 0.9 }}
     >
       {children}{" "}
       {loading ? (
