@@ -2,110 +2,44 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useState, type FC } from "react";
 import MegaMenu from ".";
+import { megaMenu } from "../../nav-items";
+import IndicatorBg from "./reusable/indicator-bg";
+import SubItem from "./reusable/sub-item";
 
-const categories = [
-  {
-    title: "Headless website",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Headless website", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-  {
-    title: "Composable commerce",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Composable commerce", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-  {
-    title: "Apps + PWAs",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Apps + PWAs", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-  {
-    title: "Custom software development",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-      {
-        title: "Custom software development",
-        meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-      },
-    ],
-  },
-  {
-    title: "Lorem Ipsum",
-    meta: "Lorem ipsum doller kocurloti habijabi tejpata",
-    subItems: [
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-      { title: "Lorem Ipsum", meta: "Lorem ipsum doller kocurloti habijabi tejpata" },
-    ],
-  },
-];
+const { categories } = megaMenu;
 
 const CategoriesMenu: FC = () => {
   const [active, setActive] = useState(categories[0].title);
 
+  const subItems: { title: string; meta: string; icon: any }[] =
+    categories.find((item) => item.title === active)?.subItems || [];
+
   return (
     <MegaMenu>
       <div className="p-5 bg-primary-light rounded-lg flex items-stretch gap-3">
-        <motion.ul className="bg-dark p-4 rounded-md">
+        <motion.ul className="bg-dark p-4 rounded-md flex-1">
           {categories.map(({ title, meta }, key) => (
             <motion.li
               key={key}
               onMouseEnter={() => setActive(title)}
               className={clsx(
-                "p-3 rounded-md relative group transition-all",
-                active === title &&
-                  "bg-gray before:absolute before:top-1/2 before:transform before:-translate-y-1/2 before:-right-5 before:h-0 before:w-0 before:border-y-[10px] before:border-y-transparent before:border-l-[20px] before:border-gray after:absolute after:top-1/2 after:transform after:-translate-y-1/2 after:-right-11 after:h-0 after:w-0 after:border-y-[10px] after:border-y-transparent after:border-l-[20px] after:border-gray",
-
-                // hover style
-                "hover:bg-gray transition-all"
+                "p-3 rounded-md relative group transition-colors z-10",
+                active === title && "text-dark"
               )}
             >
-              <span className="block whitespace-nowrap group-hover:text-primary">{title}</span>
-              <span className="text-xs leading- block font-normal">{meta}</span>
+              <span className="block whitespace-nowrap font-semibold">{title}</span>
+              <span className="text-xs block font-normal">{meta}</span>
+
+              {active === title && <IndicatorBg />}
             </motion.li>
           ))}
         </motion.ul>
-        <div className="w-96">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo et saepe distinctio ad vitae
-          mollitia temporibus. Provident officia animi dolorum eum doloremque temporibus, sunt
-          voluptates illum, dolorem nihil magni quisquam?
-        </div>
+
+        <motion.ul className="bg-dark p-4 rounded-md">
+          {subItems.map((item) => (
+            <SubItem key={item.title} {...item} />
+          ))}
+        </motion.ul>
       </div>
     </MegaMenu>
   );
