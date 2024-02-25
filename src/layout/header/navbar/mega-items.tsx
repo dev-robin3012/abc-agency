@@ -42,6 +42,9 @@ const MegaItems: FC<Props> = ({ items }) => {
             {showMegaMenu && active === item.label && (
               <motion.span
                 layoutId="arrow-up"
+                transition={{
+                  duration: 0.5,
+                }}
                 className="absolute left-0 right-0 top-full w-0 h-0 border-x-[14px] border-x-transparent border-b-[28px] border-b-primary-light block mx-auto"
               />
             )}
@@ -69,6 +72,9 @@ const MegaItems: FC<Props> = ({ items }) => {
               display: "none",
             },
           },
+        }}
+        transition={{
+          duration: 0.4,
         }}
       >
         {activeMenu}
