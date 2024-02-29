@@ -12,8 +12,8 @@ const HeroSection: FC = () => {
   const x = useMotionValue(200);
   const y = useMotionValue(200);
 
-  const rotateX = useTransform(y, [0, 400], [20, -20]);
-  const rotateY = useTransform(x, [0, 400], [40, -40]);
+  const rotateX = useTransform(y, [0, 400], [25, -25]);
+  const rotateY = useTransform(x, [0, 400], [-25, 25]);
 
   const handleMouse = (e: {
     currentTarget: { getBoundingClientRect: () => any };
@@ -27,15 +27,8 @@ const HeroSection: FC = () => {
   };
 
   return (
-    <section
-      className="min-h-[60vh] md:min-h-[70vh] flex items-center justify-center group"
-      onMouseMove={handleMouse}
-      onMouseLeave={() => {
-        x.set(200);
-        y.set(200);
-      }}
-    >
-      <Container className="overflow-x-hidden py-10 flex flex-col xl:flex-row gap-5 items-center justify-between">
+    <section className="min-h-[60vh] md:min-h-[70vh] flex items-center justify-center group">
+      <Container className="overflow-x-hidden py-10 flex flex-col xl:flex-row gap-5 xl:gap-0 items-stretch justify-between">
         <div className="space-y-10">
           <Typography.Hero>
             <motion.span
@@ -131,10 +124,19 @@ const HeroSection: FC = () => {
         </div>
 
         <motion.div
-          className={cn("transition-all duration-700 ease-in-out")}
-          style={{ rotateX, rotateY }}
+          className={cn(
+            "transition-all duration-700 ease-in-out p-10 flex items-center justify-center"
+          )}
+          onMouseMove={handleMouse}
+          onMouseLeave={() => {
+            x.set(200);
+            y.set(200);
+          }}
+          style={{ perspective: 400 }}
         >
-          <Image src={heroImage} alt="" height={550} width={550} />
+          <motion.div style={{ rotateX, rotateY }} className="transition-all duration-100">
+            <Image src={heroImage} alt="" height={500} width={500} />
+          </motion.div>
         </motion.div>
       </Container>
     </section>
