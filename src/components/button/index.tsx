@@ -1,4 +1,4 @@
-import colors from "@/assets/colors";
+import colors from "@/utils/colors";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import type { FC } from "react";
