@@ -134,7 +134,13 @@ const HeroSection: FC = () => {
           }}
           style={{ perspective: 400 }}
         >
-          <motion.div style={{ rotateX, rotateY }} className="transition-all duration-100">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1, type: "spring", stiffness: 150 }}
+            style={{ rotateX, rotateY }}
+            className="transition-all duration-100"
+          >
             <Image src={heroImage} alt="" height={500} width={500} />
           </motion.div>
         </motion.div>

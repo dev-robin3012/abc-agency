@@ -1,9 +1,9 @@
 "use client";
 
 import HeroSection from "@/sections/hero-section";
+import ParaloxCards from "@/sections/paralox-cards";
 import PerspectiveImage from "@/sections/perspective-image";
 import ReviewSection from "@/sections/reviews-section";
-import Showcase from "@/sections/show-case";
 import type { FC, PropsWithChildren } from "react";
 
 const HomepageContent: FC<PropsWithChildren> = ({ children }) => {
@@ -11,7 +11,7 @@ const HomepageContent: FC<PropsWithChildren> = ({ children }) => {
     <main>
       <HeroSection />
       <PerspectiveImage />
-      <Showcase />
+      <ParaloxCards />
       <ReviewSection />
       <ReviewSection />
     </main>
