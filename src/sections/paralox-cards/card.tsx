@@ -1,28 +1,49 @@
 import Typography from "@/components/typography";
 import cn from "@/utils/className-merge";
-import clsx from "clsx";
-import { motion, useTransform } from "framer-motion";
-import type { FC } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import { useRef, type FC } from "react";
 import type { CardProps } from "./interface";
 
-const ParaloxCard: FC<CardProps> = ({ index, range, targetScale, progress }) => {
+const ParaloxCard: FC<CardProps> = ({
+  index,
+  range,
+  targetScale,
+  progress,
+  title,
+  description,
+  image,
+}) => {
+  const cardRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "start start"],
+  });
+
+  const imgScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div className={clsx("h-[80vh] sticky top-0 flex items-end justify-center pt-[300px]")}>
+    <div ref={cardRef} className={cn("h-[80vh] sticky top-[12vh] flex items-end justify-center")}>
       <motion.div
-        className={cn("h-full w-full p-10 rounded-xl relative bg-black border-2 border-primary ")}
+        className={cn("h-max w-full p-10 rounded-xl relative bg-black border-2 border-primary")}
         style={{ top: `calc(-10% + ${index * 25}px)`, scale }}
       >
-        <Typography.H2 className="text-[12rem] absolute top-0 -z-10 leading-none left-5 text-gray">
-          {index + 1}
-        </Typography.H2>
-
-        <Typography.Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugit adipisci. Nisi,
-          reprehenderit atque! Aut reiciendis libero sequi ratione? Aliquam perspiciatis optio amet
-          voluptas illum assumenda est unde possimus voluptatibus!
-        </Typography.Text>
+        <div className="grid  lg:grid-cols-2 place-items-stretch gap-10 mt-5">
+          <div className="space-y-10">
+            <Typography.H2>{title}</Typography.H2>
+            <Typography.Text className="first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:text-primary">
+              {description}
+            </Typography.Text>
+          </div>
+          <div className="relative w-full h-[350px] rounded-2xl overflow-hidden">
+            <motion.div className="h-full w-full" style={{ scale: imgScale }}>
+              <Image src={image} alt="" objectFit="cover" fill priority />
+            </motion.div>
+          </div>
+        </div>
       </motion.div>
     </div>
   );

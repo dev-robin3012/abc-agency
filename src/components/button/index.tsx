@@ -1,5 +1,5 @@
+import cn from "@/utils/className-merge";
 import colors from "@/utils/colors";
-import clsx from "clsx";
 import { motion } from "framer-motion";
 import type { FC } from "react";
 import Icon from "../icons";
@@ -17,27 +17,25 @@ const Button: FC<ButtonProps> = ({
   icon,
   iconOnHover = false,
 }) => {
-  const sizeing = clsx({
+  const sizeing = cn({
     "px-5 py-2 text-sm": size === "sm",
     "px-6 py-2.5 text-base": size === "md",
     "px-7 py-3 text-base": size === "lg",
   });
 
-  const variation = clsx(
-    `border border-${type}`,
-    variant === "fill" && `bg-${type} text-dark`,
-    variant === "outline" && `text-${type}`
-  );
-
   return (
     <motion.button
-      className={clsx(
+      className={cn(
         sizeing,
-        variation,
-        "rounded-3xl inline-flex gap-2 items-center justify-center transition-all disabled:cursor-not-allowed disabled:bg-opacity-30 disabled:border-gray disabled:text-gray group ",
+        variant === "fill" && `bg-${type} text-dark`,
+        variant === "outline" && `text-${type}`,
+        "rounded-3xl inline-flex gap-2 items-center justify-center transition-all disabled:cursor-not-allowed disabled:bg-opacity-30 disabled:border-gray disabled:text-gray group",
         iconPlace === "start" && "flex-row-reverse",
         className
       )}
+      style={{
+        border: `1px solid ${colors[type]}`,
+      }}
       disabled={disabled || loading}
       whileHover={{
         boxShadow: disabled ? "none" : `0px 0px 16px ${colors[type]}`,
@@ -53,7 +51,7 @@ const Button: FC<ButtonProps> = ({
       {loading ? (
         <Icon name="spin" className="text-inherit" />
       ) : (
-        <span className={clsx(iconOnHover ? "hidden group-hover:block" : "")}>{icon}</span>
+        <span className={cn(iconOnHover ? "hidden group-hover:block" : "")}>{icon}</span>
       )}
     </motion.button>
   );

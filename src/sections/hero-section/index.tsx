@@ -27,15 +27,15 @@ const HeroSection: FC = () => {
   };
 
   return (
-    <section className="min-h-[60vh] md:min-h-[70vh] flex items-center justify-center group">
-      <Container className="overflow-x-hidden py-10 flex flex-col xl:flex-row gap-5 xl:gap-0 items-stretch justify-between">
+    <section className="h-[85vh] flex items-end justify-center group">
+      <Container className="overflow-x-hidden flex flex-col xl:flex-row gap-5 xl:gap-0 items-stretch justify-between py-5">
         <div className="space-y-10">
           <Typography.Hero>
             <motion.span
               initial={{ y: "-500px" }}
               animate={{ y: 0 }}
               transition={{ duration: 1, type: "spring", stiffness: 150 }}
-              className="block"
+              className="block leading-none"
             >
               <motion.span
                 animate={{ color: ["#ffffff", "#90E900", "#ffffff"] }}
@@ -82,7 +82,7 @@ const HeroSection: FC = () => {
             </span>
 
             <motion.span
-              className="block"
+              className="block leading-none"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               transition={{ delay: 2, duration: 1, type: "tween" }}
@@ -125,7 +125,7 @@ const HeroSection: FC = () => {
 
         <motion.div
           className={cn(
-            "transition-all duration-700 ease-in-out p-10 flex items-center justify-center"
+            "transition-all duration-700 ease-in-out flex items-center justify-center p-5"
           )}
           onMouseMove={handleMouse}
           onMouseLeave={() => {
