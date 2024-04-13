@@ -9,7 +9,7 @@ interface Props {
 
 const NavLink: FC<Props> = ({ label, href = "" }) => {
   return (
-    <motion.div className="font-semibold cursor-pointer px-10 py-2.5">
+    <motion.div className="font-semibold cursor-pointer px-5 xl:px-8 py-2.5">
       <CustomLink label={label} href={href} />
     </motion.div>
   );

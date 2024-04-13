@@ -27,14 +27,14 @@ const Button: FC<ButtonProps> = ({
     <motion.button
       className={cn(
         sizeing,
-        variant === "fill" && `bg-${type} text-dark`,
-        variant === "outline" && `text-${type}`,
+        variant === "fill" ? `text-dark` : `text-${type}`,
         "rounded-3xl inline-flex gap-2 items-center justify-center transition-all disabled:cursor-not-allowed disabled:bg-opacity-30 disabled:border-gray disabled:text-gray group",
         iconPlace === "start" && "flex-row-reverse",
         className
       )}
       style={{
         border: `1px solid ${colors[type]}`,
+        background: variant === "fill" ? colors[type] : "",
       }}
       disabled={disabled || loading}
       whileHover={{

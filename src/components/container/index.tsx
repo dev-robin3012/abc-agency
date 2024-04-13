@@ -7,7 +7,7 @@ interface IProps extends PropsWithChildren {
 
 const Container: FC<IProps> = ({ children, className, ...rest }) => {
   return (
-    <div className={clsx("container max-w-7xl", className)} {...rest}>
+    <div className={clsx("container max-w-7xl md:px-10 lg:px-14", className)} {...rest}>
       {children}
     </div>
   );

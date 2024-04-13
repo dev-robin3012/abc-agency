@@ -1,9 +1,8 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useState, type FC } from "react";
-import { INavItem } from "../interface";
+import type { INavItem } from "../interface";
 import CategoriesMenu from "./mega-menu/categories";
-import ProductsMenu from "./mega-menu/products";
 import ServicesMenu from "./mega-menu/services";
 
 interface Props {
@@ -13,7 +12,6 @@ interface Props {
 const menus = {
   categories: <CategoriesMenu />,
   services: <ServicesMenu />,
-  products: <ProductsMenu />,
 };
 
 const MegaItems: FC<Props> = ({ items }) => {
@@ -36,7 +34,7 @@ const MegaItems: FC<Props> = ({ items }) => {
           // onMouseLeave={() => setActive("")}
           className="py-2.5 font-semibold cursor-pointer"
         >
-          <span className="relative px-10">
+          <span className="relative px-5 xl:px-8">
             {item.label}
 
             {showMegaMenu && active === item.label && (

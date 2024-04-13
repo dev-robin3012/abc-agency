@@ -1,5 +1,7 @@
+import serviceIcon from "@/assets/service-icon.svg";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState, type FC } from "react";
 import MegaMenu from ".";
 import { megaMenu } from "../../nav-items";
@@ -35,14 +37,16 @@ const ServicesMenu: FC = () => {
           ))}
         </motion.ul>
 
-        <div className="bg-dark p-4 rounded-md overflow-hidden flex ">
+        <div className="bg-dark p-4 rounded-md overflow-hidden flex items-center">
           <motion.ul>
             {subItems.map((item) => (
               <SubItem key={item.title} {...item} />
             ))}
           </motion.ul>
 
-          {/* <div className="h-[100px] w-[200px] border border-primary"></div> */}
+          <div className="h-[100px] w-[250px] px-10 xl:flex items-center justify-center hidden">
+            <Image src={serviceIcon} alt="" />
+          </div>
         </div>
       </div>
     </MegaMenu>

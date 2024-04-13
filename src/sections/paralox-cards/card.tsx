@@ -40,7 +40,7 @@ const ParaloxCard: FC<CardProps> = ({
           </div>
           <div className="relative w-full h-[350px] rounded-2xl overflow-hidden">
             <motion.div className="h-full w-full" style={{ scale: imgScale }}>
-              <Image src={image} alt="" objectFit="cover" fill priority />
+              <Image src={image} alt="" objectFit="cover" fill priority className="h-auto w-auto" />
             </motion.div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const HeroSection: FC = () => {
   };
 
   return (
-    <section className="h-[85vh] flex items-end justify-center group">
+    <section className="min-h-[85vh] flex items-center lg:items-end justify-center group">
       <Container className="overflow-x-hidden flex flex-col xl:flex-row gap-5 xl:gap-0 items-stretch justify-between py-5">
         <div className="space-y-10">
           <Typography.Hero>
@@ -125,7 +125,7 @@ const HeroSection: FC = () => {
 
         <motion.div
           className={cn(
-            "transition-all duration-700 ease-in-out flex items-center justify-center p-5"
+            "hidden lg:flex items-center justify-center transition-all duration-700 ease-in-out p-5"
           )}
           onMouseMove={handleMouse}
           onMouseLeave={() => {
