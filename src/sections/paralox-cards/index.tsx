@@ -16,7 +16,7 @@ const ParaloxCards: FC = () => {
 
   return (
     <motion.section ref={sectionRef}>
-      <Container className="pb-32">
+      <Container>
         {cardsData.map((card, index) => (
           <ParaloxCard
             key={index}

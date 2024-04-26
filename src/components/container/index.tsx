@@ -1,16 +1,20 @@
 import clsx from "clsx";
-import type { FC, PropsWithChildren } from "react";
+import { forwardRef, type PropsWithChildren } from "react";
 
-interface IProps extends PropsWithChildren {
+interface ContainerProps extends PropsWithChildren {
   className?: string;
 }
 
-const Container: FC<IProps> = ({ children, className, ...rest }) => {
+const Container = forwardRef<HTMLDivElement, ContainerProps>((props, ref) => {
+  const { children, className, ...rest } = props;
+
   return (
-    <div className={clsx("container max-w-7xl md:px-10 lg:px-14", className)} {...rest}>
+    <div ref={ref} className={clsx("container max-w-7xl md:px-10 lg:px-14", className)} {...rest}>
       {children}
     </div>
   );
-};
+});
+
+Container.displayName = "Container";
 
 export default Container;

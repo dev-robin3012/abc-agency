@@ -22,10 +22,13 @@
 
   body {
     position: relative;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     color: rgb(var(--foreground-rgb));
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background: url("../../src/assets/hexagon.svg") repeat;
+    background-size: 30px;
+    background-attachment: fixed;
   }
 
   input,
