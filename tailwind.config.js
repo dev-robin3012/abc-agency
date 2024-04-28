@@ -14,8 +14,12 @@ module.exports = {
       container: {
         center: true,
         padding: "1rem",
-        screens: {
-          "2xl": "1400px",
+        screens: { "2xl": "1400px" },
+      },
+      keyframes: {
+        slide: {
+          from: { transform: "translateX(0px)" },
+          to: { transform: "translateX(calc(-400px * 5))" },
         },
       },
     },

@@ -1,4 +1,5 @@
 import AppLayout from "@/layout";
+import "keen-slider/keen-slider.min.css";
 import { Public_Sans } from "next/font/google";
 import "./styles/globals.css";
 
