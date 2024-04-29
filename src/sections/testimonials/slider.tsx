@@ -17,7 +17,7 @@ const Slider: FC<Props> = ({ moveTo = "left", speed = 50000 }) => {
     drag: true,
     mode: "free",
     rubberband: true,
-    slides: { perView: 3, spacing: 20 },
+    slides: { perView: 2, spacing: 20 },
     created(s) {
       s.moveToIdx(5, true, animation);
     },
