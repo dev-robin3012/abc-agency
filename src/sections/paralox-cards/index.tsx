@@ -4,8 +4,6 @@ import { useRef, type FC } from "react";
 import ParaloxCard from "./card";
 import cardsData from "./card-content";
 
-const colors = ["#1d4ed8", "#7e22ce", "#be185d", "#047857", "#c2410c"];
-
 const ParaloxCards: FC = () => {
   const sectionRef = useRef(null);
 
@@ -15,7 +13,7 @@ const ParaloxCards: FC = () => {
   });
 
   return (
-    <motion.section ref={sectionRef}>
+    <motion.section ref={sectionRef} className="mt-36">
       <Container>
         {cardsData.map((card, index) => (
           <ParaloxCard

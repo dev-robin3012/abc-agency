@@ -19,7 +19,7 @@ const PerspectiveImage: FC = () => {
   }, []);
 
   return (
-    <section className="py-10">
+    <section>
       <Container>
         <motion.div
           ref={ref}

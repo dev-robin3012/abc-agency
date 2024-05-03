@@ -9,7 +9,7 @@ const cardsData = [
     id: 1,
     title: "Business Meeting",
     description:
-      "Aorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugit adipisci. Nisi, reprehenderit atque! Aut reiciendis libero sequi ratione? Aliquam perspiciatis optio amet voluptas illum assumenda est unde possimus voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quis temporibus nesciunt accusantium? Dolorum voluptatem sunt expedita, asperiores repellat distinctio non quibusdam temporibus fugit id repudiandae architecto quae soluta eligendi? Aorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugit adipisci. Nisi, reprehenderit atque! Aut reiciendis libero sequi ratione? Aliquam perspiciatis optio amet voluptas illum assumenda est unde possimus voluptatibus!",
+      "Aorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugit adipisci. Nisi, reprehenderit atque! Aut reiciendis libero sequi ratione? Aliquam perspiciatis optio amet voluptas illum assumenda est unde possimus voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quis temporibus nesciunt accusantium? Dolorum voluptatem sunt expedita, asperiores repellat distinctio non quibusdam temporibus fugit id repudiandae architecto quae soluta eligendi? Aorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, fugit adipisci. Nisi, reprehenderit atque! Aut reiciendis libero sequi ratione? Aliquam perspiciatis optio amet voluptas illum assumenda est unde possimus!",
     image: img1,
   },
   {

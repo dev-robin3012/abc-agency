@@ -15,24 +15,24 @@ const ParaloxCard: FC<CardProps> = ({
   image,
 }) => {
   const cardRef = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "start start"],
   });
 
   const imgScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
-
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={cardRef} className={cn("h-[80vh] sticky top-[12vh] flex items-end justify-center")}>
+    <div ref={cardRef} className={cn("h-[80vh] sticky top-[120px] lg:top-[250px]")}>
       <motion.div
-        className={cn("h-max w-full p-10 rounded-xl relative bg-black border-2 border-primary")}
-        style={{ top: `calc(-10% + ${index * 25}px)`, scale }}
+        className={cn(
+          "h-max w-full p-5 xl:p-10 rounded-xl relative bg-black border-2 border-primary"
+        )}
+        style={{ top: `calc(-1% + ${index * 25}px)`, scale }}
       >
-        <div className="grid  lg:grid-cols-2 place-items-stretch gap-10 mt-5">
-          <div className="space-y-10">
+        <div className="grid lg:grid-cols-2 place-items-stretch gap-5 xl:gap-10">
+          <div className="space-y-3 xl:space-y-10">
             <Typography.H2>{title}</Typography.H2>
             <Typography.Text className="first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:text-primary">
               {description}

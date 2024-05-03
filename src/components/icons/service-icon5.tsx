@@ -1,4 +1,4 @@
-import { FC } from "react";
+import type { FC } from "react";
 
 const ServiceIcon5: FC = () => {
   return (

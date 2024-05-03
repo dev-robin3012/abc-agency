@@ -6,7 +6,7 @@ const Hero: FC<ITypographyProps> = ({ children, className }) => (
   <h1
     className={cn(
       "font-bold transition-all leading-[120%]",
-      "text-[2.44rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.25rem]",
+      "text-[2.44rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem]",
       className
     )}
   >

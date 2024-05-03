@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import cn from "@/utils/className-merge";
 import type { FC } from "react";
 import type IconProps from "./interface";
 
@@ -10,7 +10,7 @@ const ArrowRight: FC<Pick<IconProps, "className">> = ({ className }) => {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      className={clsx(className)}
+      className={cn(className)}
     >
       <g clipPath="url(#clip0_306_461)">
         <path

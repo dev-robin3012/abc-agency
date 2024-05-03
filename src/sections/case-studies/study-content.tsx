@@ -24,9 +24,9 @@ const StudyContent: FC<Props> = ({ title, subTitle }) => {
     <motion.article ref={targetRef} className="absolute inset-0 flex items-center justify-center">
       <Container>
         <motion.div style={{ y, opacity }}>
-          <Typography.H3>{subTitle}</Typography.H3>
-          <Typography.H2 className="text-6xl font-bold text-primary">{title}</Typography.H2>
-          <Typography.Text className="text-2xl my-10">
+          <Typography.H2>{subTitle}</Typography.H2>
+          <Typography.H3 className="text-6xl font-bold text-primary">{title}</Typography.H3>
+          <Typography.Text className="text-xl my-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, blanditiis soluta eius
             quam modi aliquam quaerat odit deleniti minima maiores voluptate est ut saepe
             accusantium maxime doloremque nulla consectetur possimus. Lorem ipsum dolor sit amet

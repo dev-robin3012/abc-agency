@@ -33,7 +33,7 @@ const GallarySection: FC = () => {
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 2.75]);
 
   return (
-    <section className="py-32">
+    <section className="py-36 lg:pt-0 lg:pb-32">
       <Container ref={containerRef} className="space-y-10">
         <div ref={textRef}>
           <Typography.Text className="text-5xl flex flex-wrap gap-4">

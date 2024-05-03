@@ -8,7 +8,7 @@ import Navbar from "./navbar";
 
 const Header: FC = () => {
   return (
-    <header className="fixed top-0 right-0 left-0 bg-dark z-10 shadow-2xl">
+    <header id="header" className="sticky top-0 right-0 left-0 bg-dark z-10 shadow-2xl">
       <Container className="flex items-center justify-between mx-auto py-5">
         <Link href="/">
           <Image

@@ -8,8 +8,8 @@ const TestimonialSection: FC = () => {
     <section className="py-32">
       <Container className="space-y-5">
         <div className="mb-10">
-          <Typography.H2>Testimonials</Typography.H2>
-          <Typography.Text>
+          <Typography.H2 className="text-primary">Testimonials</Typography.H2>
+          <Typography.Text className="text-xl">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, dolore provident
             quae consectetur sunt modi qui! Ab, facere. Doloremque dolorem iusto officiis magni ad
             optio iure nulla provident! Quo, voluptate.

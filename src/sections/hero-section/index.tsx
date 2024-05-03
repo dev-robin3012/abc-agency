@@ -21,16 +21,15 @@ const HeroSection: FC = () => {
     clientY: number;
   }) => {
     const rect = e.currentTarget.getBoundingClientRect();
-
     x.set(e.clientX - rect.left);
     y.set(e.clientY - rect.top);
   };
 
   return (
-    <section className="min-h-[85vh] flex items-center lg:items-end justify-center group">
-      <Container className="overflow-x-hidden flex flex-col xl:flex-row gap-5 xl:gap-0 items-stretch justify-between py-5">
+    <section className="flex items-center lg:items-end justify-center group py-36 lg:py-32">
+      <Container className="overflow-x-hidden flex gap-5 xl:gap-0 items-stretch justify-between py-5">
         <div className="space-y-10">
-          <Typography.Hero>
+          <Typography.Hero className="xl:text-[4rem]">
             <motion.span
               initial={{ y: "-500px" }}
               animate={{ y: 0 }}
@@ -108,7 +107,7 @@ const HeroSection: FC = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 3 }}
             >
-              Elevate Your Brand Powerhouse Agency for Impactful Strategies
+              Elevate Your Brand Powerhouse for Impactful Strategies
             </motion.span>
           </Typography.H4>
 
@@ -125,7 +124,7 @@ const HeroSection: FC = () => {
 
         <motion.div
           className={cn(
-            "hidden lg:flex items-center justify-center transition-all duration-700 ease-in-out p-5"
+            "hidden xl:flex items-center justify-center transition-all duration-700 ease-in-out p-5"
           )}
           onMouseMove={handleMouse}
           onMouseLeave={() => {
