@@ -1,5 +1,5 @@
 import Typography from "@/components/typography";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import type { FC } from "react";
 
 interface Props {
@@ -16,6 +16,8 @@ const Testimomoal: FC<Props> = ({ index }) => {
         alt=""
         width={130}
         height={200}
+        className="h-full w-[130px]"
+        sizes="130px"
       />
 
       <div className="p-5">

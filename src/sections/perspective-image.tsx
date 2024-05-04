@@ -1,7 +1,7 @@
 import image from "@/assets/heroImage.png";
 import Container from "@/components/container";
 import { motion } from "framer-motion";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useEffect, useRef, useState, type FC } from "react";
 
 const PerspectiveImage: FC = () => {
@@ -31,7 +31,7 @@ const PerspectiveImage: FC = () => {
             transform: `perspective(500px) rotateX(${rotatation}deg)`,
           }}
         >
-          <Image src={image} alt="Dashboard preview" className="mx-auto" />
+          <Image src={image} alt="Dashboard preview" className="mx-auto w-full h-auto" />
         </motion.div>
       </Container>
     </section>

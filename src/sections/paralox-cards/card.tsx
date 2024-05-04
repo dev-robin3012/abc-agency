@@ -24,7 +24,7 @@ const ParaloxCard: FC<CardProps> = ({
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={cardRef} className={cn("h-[80vh] sticky top-[120px] lg:top-[250px]")}>
+    <div ref={cardRef} className={cn("h-[80vh] sticky top-[120px] lg:top-[190px]")}>
       <motion.div
         className={cn(
           "h-max w-full p-5 xl:p-10 rounded-xl relative bg-black border-2 border-primary"

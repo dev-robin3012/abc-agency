@@ -27,7 +27,7 @@ const HeroSection: FC = () => {
 
   return (
     <section className="flex items-center lg:items-end justify-center group py-36 lg:py-32">
-      <Container className="overflow-x-hidden flex gap-5 xl:gap-0 items-stretch justify-between py-5">
+      <Container className="overflow-x-hidden flex gap-5 xl:gap-0 items-stretch justify-between">
         <div className="space-y-10">
           <Typography.Hero className="xl:text-[4rem]">
             <motion.span
