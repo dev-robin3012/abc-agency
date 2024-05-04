@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/codemod": "^14.2.3",
     "@studio-freight/lenis": "^1.0.42",
     "@types/node": "20.4.0",
     "@types/react": "18.2.14",

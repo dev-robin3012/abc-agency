@@ -140,7 +140,7 @@ const HeroSection: FC = () => {
             style={{ rotateX, rotateY }}
             className="transition-all duration-100"
           >
-            <Image src={heroImage} alt="" height={500} width={500} />
+            <Image src={heroImage} alt="Strategy" height={500} width={500} />
           </motion.div>
         </motion.div>
       </Container>

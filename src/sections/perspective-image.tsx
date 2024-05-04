@@ -31,7 +31,7 @@ const PerspectiveImage: FC = () => {
             transform: `perspective(500px) rotateX(${rotatation}deg)`,
           }}
         >
-          <Image src={image} alt="" className="mx-auto" />
+          <Image src={image} alt="Dashboard preview" className="mx-auto" />
         </motion.div>
       </Container>
     </section>
