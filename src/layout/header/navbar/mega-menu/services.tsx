@@ -1,7 +1,7 @@
 import serviceIcon from "@/assets/service-icon.svg";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState, type FC } from "react";
 import MegaMenu from ".";
 import { megaMenu } from "../../nav-items";

@@ -5,7 +5,7 @@ import img4 from "@/assets/card-img-4.jpg";
 import cn from "@/utils/className-merge";
 import type { ClassValue } from "clsx";
 import { motion, type MotionValue } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import type { FC } from "react";
 
 interface Props {
@@ -17,16 +17,16 @@ const Column: FC<Props> = ({ y, className }) => {
   return (
     <motion.div className={cn("space-y-4 relative", className)} style={{ y }}>
       <div className="rounded-lg overflow-hidden relative h-[400px]">
-        <Image src={img1} alt="" fill objectFit="cover" />
+        <Image src={img1} alt="" layout="fill" objectFit="cover" />
       </div>
       <div className="rounded-lg overflow-hidden relative h-[400px]">
-        <Image src={img2} alt="" fill objectFit="cover" />
+        <Image src={img2} alt="" layout="fill" objectFit="cover" />
       </div>
       <div className="rounded-lg overflow-hidden relative h-[400px]">
-        <Image src={img3} alt="" fill objectFit="cover" />
+        <Image src={img3} alt="" layout="fill" objectFit="cover" />
       </div>
       <div className="rounded-lg overflow-hidden relative h-[400px]">
-        <Image src={img4} alt="" fill objectFit="cover" />
+        <Image src={img4} alt="" layout="fill" objectFit="cover" />
       </div>
     </motion.div>
   );

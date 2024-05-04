@@ -1,7 +1,7 @@
 import Typography from "@/components/typography";
 import cn from "@/utils/className-merge";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useRef, type FC } from "react";
 import type { CardProps } from "./interface";
 
@@ -41,7 +41,7 @@ const ParaloxCard: FC<CardProps> = ({
 
           <div className="overflow-hidden rounded-2xl">
             <motion.div className="relative h-[350px] border" style={{ scale: imgScale }}>
-              <Image src={image} alt={title} fill objectFit="cover" sizes="100vw" />
+              <Image src={image} alt={title} layout="fill" objectFit="cover" sizes="100vw" />
             </motion.div>
           </div>
         </div>

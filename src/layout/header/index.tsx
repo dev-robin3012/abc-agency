@@ -1,6 +1,6 @@
 import logo from "@/assets/Logo.png";
 import Container from "@/components/container";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import type { FC } from "react";
 import MobileMenu from "./mobile-menu";

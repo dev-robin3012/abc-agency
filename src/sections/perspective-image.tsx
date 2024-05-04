@@ -1,7 +1,7 @@
 import image from "@/assets/heroImage.png";
 import Container from "@/components/container";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useEffect, useRef, useState, type FC } from "react";
 
 const PerspectiveImage: FC = () => {

@@ -2,7 +2,7 @@ import logo from "@/assets/Logo.png";
 import Container from "@/components/container";
 import Icon from "@/components/icons";
 import Typography from "@/components/typography";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import type { FC } from "react";
 
 const Footer: FC = () => {

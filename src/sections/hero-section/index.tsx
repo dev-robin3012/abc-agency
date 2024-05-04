@@ -5,7 +5,7 @@ import Icon from "@/components/icons";
 import Typography from "@/components/typography";
 import cn from "@/utils/className-merge";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { type FC } from "react";
 
 const HeroSection: FC = () => {
@@ -124,7 +124,7 @@ const HeroSection: FC = () => {
 
         <motion.div
           className={cn(
-            "hidden xl:flex items-center justify-center transition-all duration-700 ease-in-out p-5"
+            "hidden xl:flex items-center justify-center transition-all duration-700 ease-in-out"
           )}
           onMouseMove={handleMouse}
           onMouseLeave={() => {
@@ -138,9 +138,16 @@ const HeroSection: FC = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 1, type: "spring", stiffness: 150 }}
             style={{ rotateX, rotateY }}
-            className="transition-all duration-100"
+            className="transition-all duration-100 relative w-[450px] h-[450px]"
           >
-            <Image src={heroImage} alt="Strategy" height={500} width={500} />
+            <Image
+              src={heroImage}
+              alt="Strategy"
+              priority
+              layout="fill"
+              objectFit="contain"
+              sizes="450px"
+            />
           </motion.div>
         </motion.div>
       </Container>
