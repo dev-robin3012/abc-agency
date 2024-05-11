@@ -1,6 +1,5 @@
 # ABC Agency
 
-## Description
 This project is developed using Next.js, TypeScript, Tailwind CSS, and Framer Motion. It serves as a [brief description of your project].
 
 ## Technologies Used
